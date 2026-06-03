@@ -1075,26 +1075,55 @@ p {
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 120px 16px 60px 16px;
+  }
+
+  .features-section, .about-section, .faqs-section, .final-cta-section {
+    padding: 60px 16px;
+  }
+
   .hero-title {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
   
   .hero-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
   }
   
   .nav-links {
-    display: none; /* Hide standard links to enable mobile drawer overlay later */
+    display: none;
   }
   
   .hamburger-btn {
     display: flex;
   }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+
+  .btn-primary-glow, .btn-secondary-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
   
   .bento-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   
+  .bento-card {
+    padding: 24px 20px;
+  }
+
   .bento-card.col-span-2 {
     grid-column: span 1;
   }
@@ -1115,6 +1144,26 @@ p {
     white-space: nowrap;
   }
   
+  .mockup-content {
+    padding: 16px;
+  }
+
+  .mockup-stats-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .visual-balance-card {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1.8 / 1;
+    padding: 16px;
+  }
+
+  .visual-balance-amount {
+    font-size: 1.5rem;
+  }
+
   .mockup-inner-grid {
     flex-direction: column;
   }
@@ -1124,11 +1173,17 @@ p {
     gap: 24px;
   }
   
+  .cta-card {
+    padding: 40px 20px;
+    border-radius: 24px;
+  }
+
   .cta-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
   .cta-subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
   }
 }
