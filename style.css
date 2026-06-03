@@ -5,23 +5,23 @@
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-display: 'Outfit', sans-serif;
 
-  /* Sleek Dark Mode HSL Palette */
-  --bg-primary: 224 35% 8%;       /* #0B0F19 - Deep Space Navy */
-  --bg-secondary: 224 30% 12%;     /* #111827 - Rich Slate */
-  --bg-tertiary: 224 30% 15%;
-  --card-bg: 224 30% 12% / 0.65;
-  --card-border: 220 20% 20% / 0.45;
+  /* Sleek Light Mode Palette (Zerodha Kite Style) */
+  --bg-primary: 0 0% 100%;        /* #FFFFFF - Pure White */
+  --bg-secondary: 0 0% 98%;       /* #FAFAFA - Crisp Off-White */
+  --bg-tertiary: 0 0% 95%;        /* #F1F1F1 - Light Neutral */
+  --card-bg: 0 0% 100% / 0.95;
+  --card-border: 0 0% 90%;        /* #E5E5E5 - Soft Gray Border */
   
-  /* Vibrant Neon Accents */
-  --accent-primary: 250 84% 63%;   /* Electric Indigo (#6366F1) */
-  --accent-cyan: 188 86% 43%;      /* Neon Cyan (#06B6D4) */
-  --accent-pink: 343 90% 60%;      /* Hot Pink (#F43F5E) */
-  --accent-green: 160 84% 39%;     /* Mint Green (#10B981) */
-  --accent-yellow: 47 95% 49%;     /* Gold (#F1C40F) */
+  /* Vibrant Accents matching Kite/Zerodha Style */
+  --accent-primary: 215 90% 50%;   /* #1E40AF - Kite Blue */
+  --accent-cyan: 200 95% 45%;      /* #0284C7 - Bright Blue */
+  --accent-pink: 12 90% 52%;       /* #EA580C - Kite Orange-Red */
+  --accent-green: 142 70% 40%;     /* #16A34A - Growth Green */
+  --accent-yellow: 35 90% 50%;     /* #F59E0B - Gold Accent */
 
   /* Text Colors */
-  --text-primary: 210 40% 98%;     /* Off-White */
-  --text-muted: 215 15% 65%;       /* Cool Grey */
+  --text-primary: 215 25% 15%;     /* #1F2937 - Deep Charcoal Text */
+  --text-muted: 215 16% 47%;       /* #4B5563 - Cool Grey Muted Text */
 }
 
 /* Base resets & layouts */
@@ -87,7 +87,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: hsl(var(--text-primary));
 }
 
 p {
@@ -147,7 +147,7 @@ p {
 }
 
 .btn-secondary-outline {
-  color: #fff;
+  color: hsl(var(--text-primary));
   text-decoration: none;
   background: hsl(var(--bg-secondary) / 0.5);
   border: 1px solid hsl(var(--card-border));
@@ -209,7 +209,7 @@ p {
   font-family: var(--font-display);
   font-size: 1.6rem;
   font-weight: 900;
-  background: linear-gradient(135deg, #fff 40%, hsl(var(--accent-primary)));
+  background: linear-gradient(135deg, hsl(var(--text-primary)) 40%, hsl(var(--accent-pink)));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.03em;
@@ -229,7 +229,7 @@ p {
 }
 
 .nav-link:hover {
-  color: #fff;
+  color: hsl(var(--accent-pink));
 }
 
 .hamburger-btn {
@@ -244,7 +244,7 @@ p {
 .hamburger-btn .bar {
   width: 22px;
   height: 2px;
-  background-color: #fff;
+  background-color: hsl(var(--text-primary));
   border-radius: 4px;
   transition: all 0.25s ease;
 }
@@ -309,17 +309,15 @@ p {
 }
 
 .glass-mockup {
-  background: hsl(var(--bg-secondary) / 0.55);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: hsl(var(--bg-secondary));
   border: 1px solid hsl(var(--card-border));
   border-radius: 23px;
   overflow: hidden;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 1px 1px hsl(var(--accent-primary) / 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 0 1px 1px hsl(var(--accent-primary) / 0.05);
 }
 
 .mockup-header {
-  background: hsl(var(--bg-primary) / 0.5);
+  background: hsl(var(--bg-tertiary));
   padding: 12px 18px;
   display: flex;
   align-items: center;
@@ -360,7 +358,7 @@ p {
 
 .mockup-sidebar {
   width: 160px;
-  background: hsl(var(--bg-primary) / 0.25);
+  background: hsl(var(--bg-secondary));
   border-right: 1px solid hsl(var(--card-border));
   padding: 20px 12px;
   display: flex;
@@ -400,7 +398,7 @@ p {
 
 .mockup-stat-card {
   flex: 1;
-  background: hsl(var(--bg-primary) / 0.3);
+  background: #ffffff;
   border: 1px solid hsl(var(--card-border));
   padding: 16px;
   border-radius: 12px;
@@ -431,7 +429,7 @@ p {
 
 .mockup-panel {
   flex: 1.2;
-  background: hsl(var(--bg-primary) / 0.3);
+  background: #ffffff;
   border: 1px solid hsl(var(--card-border));
   border-radius: 12px;
   padding: 16px;
@@ -588,7 +586,7 @@ p {
 .ticker-item strong {
   font-family: var(--font-display);
   font-weight: 700;
-  color: #fff;
+  color: hsl(var(--text-primary));
 }
 
 .ticker-item span {
@@ -973,15 +971,15 @@ p {
 .cta-card {
   width: 100%;
   max-width: 1000px;
-  background: linear-gradient(135deg, hsl(var(--bg-secondary) / 0.8), hsl(var(--bg-tertiary) / 0.6));
-  border: 1px solid hsl(var(--accent-primary) / 0.2);
+  background: linear-gradient(135deg, hsl(var(--bg-secondary)), hsl(var(--bg-tertiary)));
+  border: 1px solid hsl(var(--card-border));
   border-radius: 36px;
   padding: 64px 32px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 40px hsl(var(--accent-primary) / 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
 }
@@ -1024,7 +1022,7 @@ p {
 }
 
 .domains-subtext strong {
-  color: #fff;
+  color: hsl(var(--text-primary));
 }
 
 /* Footer elements styling */
