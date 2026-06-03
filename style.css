@@ -195,6 +195,12 @@ p {
   align-items: center;
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .logo-link {
   text-decoration: none;
 }
@@ -282,7 +288,7 @@ p {
 .hero-description {
   font-size: 1.2rem;
   max-width: 680px;
-  margin-bottom: 36px;
+  margin: 0 auto 36px auto;
   line-height: 1.55;
 }
 
@@ -299,7 +305,7 @@ p {
   background: radial-gradient(circle at top left, hsl(var(--accent-primary) / 0.15) 0%, transparent 60%);
   padding: 1px;
   border-radius: 24px;
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
 }
 
 .glass-mockup {
@@ -1096,6 +1102,19 @@ p {
     display: none;
   }
   
+  .navbar-container {
+    padding: 12px 16px;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .btn-navbar-glow {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+
   .hamburger-btn {
     display: flex;
   }
