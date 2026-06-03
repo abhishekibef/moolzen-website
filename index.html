@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Moolzen is the ultimate gamified sandbox trading platform for Gen Z. Mock trade real-world stocks with ₹10,00,000 virtual capital, study 60-second micro-lessons, build login streaks, and beat your rivals.">
+  <meta name="keywords" content="Moolzen, virtual trading, sandbox trading, paper trading, learn finance, Gen Z, stocks, stock market simulator, gamified learning, financial literacy">
+  <meta name="author" content="Moolzen Team">
+  <link rel="canonical" href="https://moolzen.com">
+  <title>Moolzen | Gamified Sandbox Trading & Learn Finance for Gen Z</title>
+  <link rel="icon" href="../frontend/public/favicon.ico" type="image/x-icon">
+  <!-- Modern Display & Sans Fonts from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Premium Custom Styling Sheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Glow Accents -->
+  <div class="glow-accent-1" aria-hidden="true"></div>
+  <div class="glow-accent-2" aria-hidden="true"></div>
+
+  <!-- Header Section -->
+  <header class="navbar-header" id="navbar">
+    <div class="navbar-container">
+      <a href="#" class="logo-link">
+        <span class="logo-text">Moolzen</span>
+      </a>
+      
+      <nav class="nav-links" id="mobile-menu" aria-label="Main Navigation">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#ticker-section" class="nav-link">Market Sandbox</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#faqs" class="nav-link">FAQs</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Direct link to frontend local/production trading app layout -->
+        <a href="http://localhost:3000" id="btn-launch-header" class="btn-navbar-glow">
+          Launch App 🚀
+        </a>
+        <button class="hamburger-btn" id="hamburger-menu" aria-label="Toggle Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <div class="hero-badge" id="hero-announcement">
+          <span class="badge-icon">🔥</span>
+          <span class="badge-text">Start Trading with ₹10,00,000 Sandbox Cash</span>
+        </div>
+        
+        <h1 class="hero-title">
+          Trade Smarter.<br>
+          <span class="gradient-text">Grow Faster.</span><br>
+          Learn Gamified.
+        </h1>
+        
+        <p class="hero-description">
+          Experience high-fidelity sandbox stock trading with absolute zero financial risk. Master the markets in 60-second micro-lessons, build active streaks, and beat your social rivals on the leaderboard.
+        </p>
+        
+        <div class="hero-buttons">
+          <a href="http://localhost:3000/auth/login" id="hero-btn-primary" class="btn-primary-glow">
+            Start Mock Trading ⚡
+          </a>
+          <a href="#features" id="hero-btn-secondary" class="btn-secondary-outline">
+            Explore Features
+          </a>
+        </div>
+
+        <!-- Interactive Floating Mockup Demo Card of Moolzen App Dashboard -->
+        <div class="mockup-showcase-container" id="app-mockup">
+          <div class="glass-mockup">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="mockup-address-bar">moolzen.com/dashboard</div>
+            </div>
+            
+            <div class="mockup-body">
+              <div class="mockup-sidebar">
+                <div class="sidebar-item active">🏠 Dashboard</div>
+                <div class="sidebar-item">📚 Micro-Learn</div>
+                <div class="sidebar-item">📈 Trade Room</div>
+                <div class="sidebar-item">🏆 Rivals League</div>
+              </div>
+              
+              <div class="mockup-content">
+                <div class="mockup-stats-row">
+                  <div class="mockup-stat-card">
+                    <span class="stat-label">Virtual Net Worth</span>
+                    <span class="stat-value" id="count-net-worth">₹10,00,000.00</span>
+                  </div>
+                  <div class="mockup-stat-card">
+                    <span class="stat-label">Active Hot Streak</span>
+                    <span class="stat-value text-pink">🔥 1 Day</span>
+                  </div>
+                </div>
+
+                <div class="mockup-inner-grid">
+                  <div class="mockup-panel main-panel">
+                    <div class="panel-header">
+                      <h3>📈 Sandbox Trending</h3>
+                      <span class="refresh-icon">🔄</span>
+                    </div>
+                    <div class="mockup-list">
+                      <div class="list-row">
+                        <div class="stock-info">
+                          <strong>ZOMATO</strong>
+                          <span>Tech</span>
+                        </div>
+                        <div class="stock-graph-placeholder"></div>
+                        <div class="stock-price text-green">
+                          ₹180.50
+                          <span class="price-change">+3.2%</span>
+                        </div>
+                      </div>
+                      <div class="list-row">
+                        <div class="stock-info">
+                          <strong>TATA-MOTORS</strong>
+                          <span>Auto</span>
+                        </div>
+                        <div class="stock-graph-placeholder down"></div>
+                        <div class="stock-price text-green">
+                          ₹950.40
+                          <span class="price-change">+1.8%</span>
+                        </div>
+                      </div>
+                      <div class="list-row">
+                        <div class="stock-info">
+                          <strong>PAYTM</strong>
+                          <span>Finance</span>
+                        </div>
+                        <div class="stock-graph-placeholder down"></div>
+                        <div class="stock-price text-red">
+                          ₹380.00
+                          <span class="price-change">-4.1%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mockup-panel side-panel">
+                    <div class="panel-header">
+                      <h3>🎓 Recommended Lesson</h3>
+                    </div>
+                    <div class="recommended-box">
+                      <span class="lesson-tag">Wealth • 55s</span>
+                      <h4>SIP: The Passive Wealth Machine</h4>
+                      <p>Learn why consistency beats timing and how compounding interest works.</p>
+                      <button type="button" class="btn-mockup-action">Start Lesson ▶️</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stock Market Sandbox Ticker Section -->
+    <section class="ticker-section" id="ticker-section">
+      <h2 class="section-title-hidden">Live Sandbox Stock Ticker</h2>
+      <div class="ticker-wrapper">
+        <div class="ticker-content" id="stock-ticker">
+          <!-- Populated dynamically via JS for perfect realism -->
+          <div class="ticker-item"><strong>ZOMATO</strong><span>₹180.50</span><span class="pct up">+3.2%</span></div>
+          <div class="ticker-item"><strong>TATA-MOTORS</strong><span>₹950.40</span><span class="pct up">+1.8%</span></div>
+          <div class="ticker-item"><strong>PAYTM</strong><span>₹380.00</span><span class="pct down">-4.1%</span></div>
+          <div class="ticker-item"><strong>NYKAA</strong><span>₹165.20</span><span class="pct down">-1.5%</span></div>
+          <div class="ticker-item"><strong>RELIANCE</strong><span>₹2,900.00</span><span class="pct up">0.0%</span></div>
+          <div class="ticker-item"><strong>HDFC-BANK</strong><span>₹1,450.00</span><span class="pct up">+0.5%</span></div>
+          <div class="ticker-item"><strong>INFY</strong><span>₹1,420.00</span><span class="pct up">+1.2%</span></div>
+          <div class="ticker-item"><strong>APPLE</strong><span>$180.00</span><span class="pct up">+0.8%</span></div>
+          <div class="ticker-item"><strong>TSLA</strong><span>$175.50</span><span class="pct down">-3.5%</span></div>
+          <div class="ticker-item"><strong>ITC</strong><span>₹430.00</span><span class="pct up">+1.1%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Bento Grid Section -->
+    <section class="features-section" id="features">
+      <div class="features-container">
+        <div class="section-header">
+          <span class="section-badge">CORE PILLARS</span>
+          <h2 class="section-title">Built for Gen Z. Engineered for Action.</h2>
+          <p class="section-subtitle">Ditch the boring spreadsheets. Moolzen matches real market parameters into a high-octane sandbox game.</p>
+        </div>
+
+        <div class="bento-grid">
+          <!-- Card 1: Virtual Cash -->
+          <div class="bento-card col-span-2 glass-card-hover" id="feat-capital">
+            <div class="card-icon">💳</div>
+            <h3 class="card-title">₹10 Lakhs Virtual Capital</h3>
+            <p class="card-desc">Kickstart your trading path with ₹10,00,000 in sandbox funds. Execute sandbox buy and sell orders on domestic and international blue chips with live-simulated price fluctuations. Learn by doing, with zero financial risk.</p>
+            <div class="card-visual">
+              <div class="visual-balance-card">
+                <span class="visual-balance-label">Sandbox Capital</span>
+                <span class="visual-balance-amount">₹10,00,000.00</span>
+                <div class="visual-card-details">
+                  <span>Moolzen Sandbox Elite</span>
+                  <span>★★★★</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Compounding Micro-Lessons -->
+          <div class="bento-card glass-card-hover" id="feat-learn">
+            <div class="card-icon">📚</div>
+            <h3 class="card-title">60s Micro-Lessons</h3>
+            <p class="card-desc">No boring textbooks. Master critical finance mechanics like Market Cap, SIP averaging, diversification ratios, and compounding math through swipeable 60-second learning guides.</p>
+            <div class="card-visual">
+              <div class="visual-lesson-badge">
+                <span class="visual-badge-unlocked">Unlocking Badge...</span>
+                <div class="visual-badge-gold">
+                  <span>🎓</span>
+                  <strong>Smart Start</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Rivals Leaderboard -->
+          <div class="bento-card glass-card-hover" id="feat-rivals">
+            <div class="card-icon">🏆</div>
+            <h3 class="card-title">Rivals Leaderboards</h3>
+            <p class="card-desc">Trading is a social sport. Compare daily net worth gains against friends on the Moolzen Rivals leaderboards, unlock high-tier streak rewards, and level up your trading prestige.</p>
+            <div class="card-visual">
+              <ul class="visual-leaderboard">
+                <li><span class="rank">#1</span> <span class="name">stonks_queen</span> <span class="worth text-green">₹18,52,400</span></li>
+                <li class="self"><span class="rank">#2</span> <span class="name">you (trader)</span> <span class="worth text-green">₹16,40,000</span></li>
+                <li><span class="rank">#3</span> <span class="name">crypto_charlie</span> <span class="worth text-red">₹12,10,000</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 4: Post-Trade Feedback -->
+          <div class="bento-card col-span-2 glass-card-hover" id="feat-feedback">
+            <div class="card-icon">🧠</div>
+            <h3 class="card-title">Dynamic Concentration Audits</h3>
+            <p class="card-desc">Every sandbox transaction triggers immediate feedback. If you violate the 35% sector concentration boundaries, you get hit with active risk warnings, coaching you to build healthy diversification habits automatically.</p>
+            <div class="card-visual">
+              <div class="visual-warning-box">
+                <div class="warning-title">⚠️ Concentration Alert!</div>
+                <p>Tech sector makes up 42% of your portfolio. Consider buying steady FMCG shares like ITC to lower sector-wide volatility spikes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info/About Section -->
+    <section class="about-section" id="about">
+      <div class="about-container">
+        <div class="about-content">
+          <span class="section-badge">WHY MOOLZEN</span>
+          <h2 class="section-title">Bridging the Financial Literacy Gap</h2>
+          <p class="about-text">
+            Traditional financial education is overly complex, text-heavy, and disconnected from practice. Moolzen changes the dynamic. By combining high-fidelity simulated sandbox trading with modular gamified micro-lessons, we enable you to experiment with market principles risk-free.
+          </p>
+          <p class="about-text">
+            See how stock news triggers price shifts, learn to control emotional FOMO dips, and structure a balanced sector portfolio. Master the market sandbox before risking a single real rupee.
+          </p>
+          <div class="about-grid">
+            <div class="about-stat">
+              <span class="stat-num">100%</span>
+              <span class="stat-lbl">Simulated Environment</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-num">&lt;60s</span>
+              <span class="stat-lbl">Micro-Learning Speed</span>
+            </div>
+            <div class="about-stat">
+              <span class="stat-num">₹10L</span>
+              <span class="stat-lbl">Starting Sandbox Cash</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faqs-section" id="faqs">
+      <div class="faqs-container">
+        <div class="section-header">
+          <span class="section-badge">GOT QUESTIONS?</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faqs-list">
+          <div class="faq-item" id="faq-1">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+              <span>Is Moolzen using real money or trading real stocks?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-1" hidden>
+              <p>No! Moolzen is a 100% simulated sandbox platform. You receive ₹10,00,000 in virtual capital upon registration to practice simulated stock trading. It is completely risk-free.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-2">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+              <span>How do login streaks work?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-2" hidden>
+              <p>Streaks track your daily active participation. Log in every 24 hours to grow your streak. Completing micro-lessons keeps your streak secure and unlocks rare achievements like the "Market Wizard" title.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-3">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+              <span>What is the 35% sector concentration limit?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-3" hidden>
+              <p>Moolzen teaches smart diversification! If a single sector (such as Tech or Auto) takes up more than 35% of your total holdings value, the app fires a risk warning to coach you on spreading market risks across different industries.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-4">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+              <span>Is Moolzen optimized for mobile web browsers?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-4" hidden>
+              <p>Yes! Moolzen is engineered as a mobile-first web app, matching a native Progressive Web App (PWA) look and feel, allowing you to track holdings on the go.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta-section">
+      <div class="cta-card">
+        <h2 class="cta-title">Ready to Beat Your Rivals?</h2>
+        <p class="cta-subtitle">Claim your ₹10 Lakhs sandbox cash and start your financial compounding path today.</p>
+        <a href="http://localhost:3000/auth/login" id="cta-btn-join" class="btn-primary-glow">
+          Launch Sandbox App Now 🚀
+        </a>
+        <div class="domains-subtext">
+          <span>Primary Domain: <strong>moolzen.com</strong></span>
+          <span class="divider">|</span>
+          <span>Redirect Domain: <strong>moolzen.in</strong></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-container">
+      <div class="footer-branding">
+        <span class="footer-logo">Moolzen</span>
+        <p class="footer-desc">Next-generation gamified simulated sandbox stock trading and financial learning environment for Gen Z.</p>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Moolzen. All rights reserved. Moolzen is a simulated sandbox environment for educational purposes. No real currencies or real financial trade assets are traded or held.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla Interaction Script -->
+  <script src="app.js"></script>
+</body>
+</html>

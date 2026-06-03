@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "moolzen.in"
+        }
+      ],
+      "destination": "https://moolzen.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.moolzen.in"
+        }
+      ],
+      "destination": "https://moolzen.com/:path*",
+      "permanent": true
+    }
+  ]
+}
