@@ -213,7 +213,7 @@ p {
   font-family: var(--font-display);
   font-size: 1.6rem;
   font-weight: 900;
-  background: linear-gradient(135deg, hsl(var(--text-primary)) 40%, hsl(var(--accent-pink)));
+  background: linear-gradient(135deg, #1f2937 40%, #ea580c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.03em;
