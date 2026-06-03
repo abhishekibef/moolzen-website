@@ -32,11 +32,15 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: hsl(var(--bg-primary));
   color: hsl(var(--text-primary));
-  overflow-x: hidden;
   line-height: 1.6;
   position: relative;
 }
@@ -257,6 +261,7 @@ p {
 }
 
 .hero-container {
+  width: 100%;
   max-width: 900px;
   text-align: center;
   display: flex;
@@ -340,14 +345,16 @@ p {
 .dot.green { background-color: #10b981; }
 
 .mockup-address-bar {
-  flex-content: 1;
-  margin: 0 auto;
+  flex: 1;
+  text-align: center;
+  margin: 0 16px;
   background: hsl(var(--bg-primary) / 0.4);
   border: 1px solid hsl(var(--card-border));
   color: hsl(var(--text-muted));
   font-size: 0.75rem;
-  padding: 4px 40px;
+  padding: 4px 16px;
   border-radius: 6px;
+  max-width: 320px;
 }
 
 .mockup-body {
@@ -619,7 +626,8 @@ p {
 
 .section-header {
   text-align: center;
-  max-content: 600px;
+  max-width: 600px;
+  width: 100%;
   margin: 0 auto 64px auto;
 }
 
@@ -877,8 +885,8 @@ p {
   font-family: var(--font-display);
   font-size: 3rem;
   font-weight: 900;
-  color: #fff;
-  background: linear-gradient(135deg, #fff, hsl(var(--accent-primary)));
+  color: hsl(var(--accent-primary));
+  background: linear-gradient(135deg, hsl(var(--accent-primary)), hsl(var(--accent-pink)));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -935,7 +943,7 @@ p {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.05rem;
-  color: #fff;
+  color: hsl(var(--text-primary));
   transition: all 0.2s ease;
 }
 
@@ -1046,7 +1054,7 @@ p {
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 900;
-  color: #fff;
+  color: hsl(var(--text-primary));
   letter-spacing: -0.02em;
   display: block;
   margin-bottom: 12px;
@@ -1098,6 +1106,35 @@ p {
   
   .nav-links {
     display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: hsl(var(--bg-primary) / 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid hsl(var(--card-border));
+    padding: 24px;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    z-index: 999;
+  }
+
+  .hamburger-btn.open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburger-btn.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-btn.open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
   
   .navbar-container {
