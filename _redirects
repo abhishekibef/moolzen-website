@@ -1,5 +1,1 @@
-# Redirect moolzen.in to moolzen.com permanently
-https://moolzen.in/*  https://moolzen.com/:splat  301!
-http://moolzen.in/*   https://moolzen.com/:splat  301!
-https://www.moolzen.in/*  https://moolzen.com/:splat  301!
-http://www.moolzen.in/*   https://moolzen.com/:splat  301!
+# Redirects file empty to prevent redirecting moolzen.in to moolzen.com

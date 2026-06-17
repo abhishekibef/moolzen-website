@@ -167,4 +167,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, duration / steps);
   }
+
+  // 6. Dynamic domain detection: Rewrite links to app.moolzen.com if accessed via .in domain
+  const currentHost = window.location.hostname;
+  if (currentHost.includes('moolzen.in') || currentHost.includes('vercel.app') || currentHost.includes('localhost') || currentHost.includes('127.0.0.1')) {
+    const links = document.querySelectorAll('a[href*="app.moolzen.com"]');
+    links.forEach(link => {
+      link.href = link.href.replace('app.moolzen.com', 'app.moolzen.in');
+    });
+  }
 });
+
