@@ -176,5 +176,32 @@ document.addEventListener('DOMContentLoaded', () => {
       link.href = link.href.replace('app.moolzen.com', 'app.moolzen.in');
     });
   }
+
+  // 7. Live Market Sync for Bento Card
+  const marketBadge = document.querySelector('#feat-marketsync .visual-market-badge');
+  if (marketBadge) {
+    const BASE_URL = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+      ? 'http://localhost:5050/api'
+      : window.location.hostname.endsWith('.moolzen.in')
+        ? 'https://api.moolzen.in/api'
+        : 'https://api.moolzen.com/api';
+
+    fetch(`${BASE_URL}/stocks/market-status`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.open) {
+          marketBadge.className = 'visual-market-badge online';
+          marketBadge.querySelector('span:nth-child(2)').textContent = 'LIVE MARKET';
+        } else {
+          marketBadge.className = 'visual-market-badge offline';
+          marketBadge.querySelector('span:nth-child(2)').textContent = 'MARKET CLOSED';
+        }
+      })
+      .catch(() => {
+        // Fallback to closed
+        marketBadge.className = 'visual-market-badge offline';
+        marketBadge.querySelector('span:nth-child(2)').textContent = 'MARKET CLOSED';
+      });
+  }
 });
 
