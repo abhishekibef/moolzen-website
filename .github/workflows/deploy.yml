@@ -18,5 +18,6 @@ jobs:
           script: |
             export PATH=/usr/bin:/bin:/usr/local/bin:/usr/local/sbin:$PATH
             cd /var/www/moolzen/website
-            git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
             echo "✅ Landing page deployed successfully!"
