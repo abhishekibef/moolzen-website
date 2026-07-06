@@ -71,12 +71,12 @@
         </h1>
         
         <p class="hero-description">
-          A high-fidelity simulated trading platform for modern investors. Execute real-time mock trades with ₹10,00,000 in virtual capital, master core financial concepts via swipeable micro-lessons, and optimize your portfolio risk-free.
+          A gamified path to confident investing. Learn core money concepts stage by stage, unlock practice trading with ₹10,00,000 in virtual capital, and build real trading intuition — one level at a time.
         </p>
         
         <div class="hero-buttons">
           <a href="https://app.moolzen.com/auth/login" id="hero-btn-primary" class="btn-primary-glow">
-            Start Mock Trading 🚀
+            Start Learning 🚀
           </a>
           <a href="#" id="hero-btn-download" class="btn-primary-glow" style="background: linear-gradient(135deg, #0284c7, #0369a1); border: none; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4); text-decoration: none;" onclick="alert('The Android App is currently undergoing security review. Please launch the Web App directly on your device to trade!'); return false;">
             Download Android App 🤖
@@ -100,10 +100,12 @@
             
             <div class="mockup-body">
               <div class="mockup-sidebar">
-                <div class="sidebar-item active">🏠 Dashboard</div>
-                <div class="sidebar-item">📚 Micro-Learn</div>
-                <div class="sidebar-item">📈 Trade Room</div>
-                <div class="sidebar-item">🏆 Rivals League</div>
+                <div class="sidebar-item active">🏠 Home</div>
+                <div class="sidebar-item">📚 Learn</div>
+                <div class="sidebar-item">📈 Practice</div>
+                <div class="sidebar-item">🏆 Leaderboard</div>
+                <div class="sidebar-item">💼 Portfolio</div>
+                <div class="sidebar-item">👤 Profile</div>
               </div>
               
               <div class="mockup-content">
@@ -227,58 +229,60 @@
             </div>
           </div>
 
-          <!-- Card 2: Compounding Micro-Lessons -->
+          <!-- Card 2: Guided Learning Path -->
           <div class="bento-card glass-card-hover" id="feat-learn">
             <div class="card-icon">📚</div>
-            <h3 class="card-title">60s Micro-Lessons</h3>
-            <p class="card-desc">No dry academic papers. Master critical finance mechanics like Market Cap, SIP averaging, diversification ratios, and compounding math through swipeable 60-second learning guides.</p>
+            <h3 class="card-title">Guided Learning Path</h3>
+            <p class="card-desc">No dry academic papers. Progress through bite-sized lessons (3–5 min each) organized into Beginner → Learner → Chart Reader → Analyst stages. Earn XP and unlock badges as you complete each level.</p>
             <div class="card-visual">
-              <div class="visual-lesson-badge">
-                <span class="visual-badge-unlocked">Unlocking Badge...</span>
-                <div class="visual-badge-gold">
-                  <span>🎓</span>
-                  <strong>Smart Start</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3: Rivals Leaderboard -->
-          <div class="bento-card glass-card-hover" id="feat-rivals">
-            <div class="card-icon">🏆</div>
-            <h3 class="card-title">Rivals Leaderboards</h3>
-            <p class="card-desc">Compare daily simulated net worth gains against friends on the Moolzen Rivals leaderboards, unlock high-tier streak achievements, and level up your trading prestige.</p>
-            <div class="card-visual">
-              <ul class="visual-leaderboard">
-                <li><span class="rank">#1</span> <span class="name">alpha_trader</span> <span class="worth text-green">₹18,52,400</span></li>
-                <li class="self"><span class="rank">#2</span> <span class="name">you (trader)</span> <span class="worth text-green">₹16,40,000</span></li>
-                <li><span class="rank">#3</span> <span class="name">compounding_pro</span> <span class="worth text-red">₹12,10,000</span></li>
+              <ul class="visual-leaderboard" style="padding: 0 16px; margin: 0; list-style: none;">
+                <li style="margin-bottom: 8px;"><span class="rank" style="color: #4ade80;">✓</span> <span class="name">Level 1: Money Basics</span></li>
+                <li style="margin-bottom: 8px;"><span class="rank" style="color: #4ade80;">✓</span> <span class="name">Level 2: Intro to Share Market</span></li>
+                <li><span class="rank" style="color: #94a3b8;">🔒</span> <span class="name" style="color: #94a3b8;">Level 3: History of Stock Market</span></li>
               </ul>
             </div>
           </div>
 
-          <!-- Card 4: Post-Trade Feedback -->
-          <div class="bento-card col-span-2 glass-card-hover" id="feat-feedback">
-            <div class="card-icon">🧠</div>
-            <h3 class="card-title">Dynamic Concentration Audits</h3>
-            <p class="card-desc">Every transaction triggers immediate risk analysis. If you violate the 35% sector concentration boundaries, the engine provides real-time warnings, coaching you to build healthy diversification habits.</p>
+          <!-- Card 3: Leaderboard -->
+          <div class="bento-card glass-card-hover" id="feat-rivals">
+            <div class="card-icon">🏆</div>
+            <h3 class="card-title">Leaderboard & Contests</h3>
+            <p class="card-desc">Climb the Trading Stars and Learning Legends leaderboards as you earn XP and grow your portfolio. Create private contests with friends using a shareable code to compete on a level playing field.</p>
             <div class="card-visual">
-              <div class="visual-warning-box">
-                <div class="warning-title">⚠️ Concentration Alert!</div>
-                <p>Tech sector makes up 42% of your portfolio. Consider buying steady FMCG shares like ITC to lower sector-wide volatility spikes.</p>
+              <ul class="visual-leaderboard">
+                <li><span class="rank">#1</span> <span class="name">alpha_trader</span> <span class="worth text-green">Diamond Tier</span></li>
+                <li class="self"><span class="rank">#2</span> <span class="name">you (trader)</span> <span class="worth text-green">Gold Tier</span></li>
+                <li><span class="rank">#3</span> <span class="name">compounding_pro</span> <span class="worth text-green">Silver Tier</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 4: Daily Missions & Streaks -->
+          <div class="bento-card col-span-2 glass-card-hover" id="feat-feedback">
+            <div class="card-icon">🔥</div>
+            <h3 class="card-title">Daily Missions & Streaks</h3>
+            <p class="card-desc">Complete your daily lesson, solve practice questions, and finish the day's market challenge to earn XP and coins. Keep your streak alive — miss a day and you'll need to start again.</p>
+            <div class="card-visual" style="display: flex; gap: 16px; justify-content: center;">
+              <div class="visual-balance-card" style="min-width: 120px;">
+                <span class="visual-balance-label">Current Streak</span>
+                <span class="visual-balance-amount" style="color: #f97316;">🔥 14 Days</span>
+              </div>
+              <div class="visual-balance-card" style="min-width: 120px;">
+                <span class="visual-balance-label">Today's XP</span>
+                <span class="visual-balance-amount" style="color: #4ade80;">+250 XP</span>
               </div>
             </div>
           </div>
 
-          <!-- Card 5: Dynamic Market Sync -->
+          <!-- Card 5: Personalized AI Coach -->
           <div class="bento-card glass-card-hover" id="feat-marketsync">
-            <div class="card-icon">🕰️</div>
-            <h3 class="card-title">Live Indian Market Sync</h3>
-            <p class="card-desc">Synchronized with official NSE & BSE Indian market hours. Displays live or closed status dynamically to teach you to trade under realistic market conditions.</p>
+            <div class="card-icon">🧠</div>
+            <h3 class="card-title">Personalized AI Coach</h3>
+            <p class="card-desc">Get a daily nudge on what to learn next, tailored tips based on your progress, and an "Ask AI" option any time you want a financial concept explained in simple, plain language.</p>
             <div class="card-visual">
-              <div class="visual-market-badge offline">
-                <span class="dot"></span>
-                <span>MARKET CLOSED</span>
+              <div class="visual-warning-box" style="background: rgba(14, 165, 233, 0.1); border-left-color: #0ea5e9;">
+                <div class="warning-title" style="color: #0ea5e9;">🤖 Moolzen AI</div>
+                <p>You're making great progress! Ready to tackle Level 3: History of Stock Market?</p>
               </div>
             </div>
           </div>
@@ -315,7 +319,7 @@
             Traditional financial education is overly complex, text-heavy, and disconnected from practice. Moolzen changes the dynamic. By combining high-fidelity simulated stock trading with modular gamified micro-lessons, we enable you to experiment with market principles risk-free.
           </p>
           <p class="about-text">
-            See how stock news triggers price shifts, learn to control emotional FOMO dips, and structure a balanced sector portfolio. Master market dynamics before risking a single real rupee.
+            See how stock news triggers price shifts, learn to control emotional FOMO dips, and build practical trading intuition through structured lessons and hands-on practice.
           </p>
           <div class="about-grid">
             <div class="about-stat">
@@ -323,8 +327,8 @@
               <span class="stat-lbl">Simulated Environment</span>
             </div>
             <div class="about-stat">
-              <span class="stat-num">&lt;60s</span>
-              <span class="stat-lbl">Micro-Learning Speed</span>
+              <span class="stat-num">3-5 MIN</span>
+              <span class="stat-lbl">Average Lesson Length</span>
             </div>
             <div class="about-stat">
               <span class="stat-num">₹10L</span>
@@ -366,11 +370,21 @@
 
           <div class="faq-item" id="faq-3">
             <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
-              <span>What is the 35% sector concentration limit?</span>
+              <span>Do I need to complete lessons before I can trade?</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer" id="faq-answer-3" hidden>
-              <p>Moolzen teaches smart diversification! If a single sector (such as Tech or Auto) takes up more than 35% of your total holdings value, the app fires a risk warning to coach you on spreading market risks across different industries.</p>
+              <p>Yes. Practice trading unlocks once you complete Levels 1–2 of the Learning Path. This ensures you understand core concepts before placing your first mock trade.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-3b">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3b">
+              <span>What do XP, coins, and levels do?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-3b" hidden>
+              <p>Moolzen uses a gamified learning loop. You earn XP and coins by completing daily missions, lessons, and practice questions. XP helps you climb the Leaderboard and unlock new trading features!</p>
             </div>
           </div>
 
@@ -390,11 +404,11 @@
     <!-- Final CTA Section -->
     <section class="final-cta-section">
       <div class="cta-card">
-        <h2 class="cta-title">Ready to Start Executing?</h2>
-        <p class="cta-subtitle">Claim your ₹10,00,000 simulated capital and start your mock trading path today.</p>
+        <h2 class="cta-title">Ready to Start Learning?</h2>
+        <p class="cta-subtitle">Claim your ₹10,00,000 simulated capital, complete your first lessons, and unlock mock trading.</p>
         <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 24px; margin-bottom: 24px;">
           <a href="https://app.moolzen.com/auth/login" id="cta-btn-join" class="btn-primary-glow" style="text-decoration: none;">
-            Launch App Now 🚀
+            Start Learning Now 🚀
           </a>
           <a href="#" id="cta-btn-download" class="btn-primary-glow" style="background: linear-gradient(135deg, #0284c7, #0369a1); border: none; box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4); text-decoration: none;" onclick="alert('The Android App is currently undergoing security review. Please launch the Web App directly on your device to trade!'); return false;">
             Download Android App 🤖
