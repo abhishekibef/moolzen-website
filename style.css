@@ -400,12 +400,30 @@ p {
   cursor: pointer;
   font-weight: 500;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-item svg {
+  flex-shrink: 0;
+  color: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.sidebar-item:hover svg {
+  transform: scale(1.12);
 }
 
 .sidebar-item.active {
-  background: hsl(var(--accent-primary) / 0.1);
+  background: hsl(var(--accent-primary) / 0.12);
   color: hsl(var(--accent-primary));
   font-weight: 700;
+}
+
+.sidebar-item.active svg {
+  color: hsl(var(--accent-primary));
+  filter: drop-shadow(0 0 6px hsl(var(--accent-primary) / 0.45));
 }
 
 .mockup-content {
@@ -609,6 +627,17 @@ p {
   font-size: 0.85rem;
 }
 
+.ticker-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.ticker-dot.gold { background: #f59e0b; box-shadow: 0 0 6px rgba(245, 158, 11, 0.5); }
+.ticker-dot.silver { background: #94a3b8; box-shadow: 0 0 6px rgba(148, 163, 184, 0.5); }
+.ticker-dot.oil { background: #0284c7; box-shadow: 0 0 6px rgba(2, 132, 199, 0.5); }
+.ticker-dot.platinum { background: #a855f7; box-shadow: 0 0 6px rgba(168, 85, 247, 0.5); }
+
 .ticker-item strong {
   font-family: var(--font-display);
   font-weight: 700;
@@ -701,8 +730,23 @@ p {
 }
 
 .card-icon {
-  font-size: 2.2rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
+  background: hsl(var(--bg-secondary));
+  border: 1px solid hsl(var(--card-border));
+  color: hsl(var(--accent-primary));
+  transition: all 0.2s ease;
+}
+
+.bento-card:hover .card-icon {
+  background: hsl(var(--accent-primary) / 0.1);
+  border-color: hsl(var(--accent-primary) / 0.3);
+  transform: scale(1.06);
 }
 
 .card-title {
