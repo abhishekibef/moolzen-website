@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Moolzen is the premier high-fidelity simulated trading environment for modern investors. Mock trade real-world stocks with ₹10,00,000 in virtual capital, study micro-lessons, track active streaks, and test strategies risk-free.">
-  <meta name="keywords" content="Moolzen, virtual trading, paper trading, learn finance, stocks, stock market simulator, gamified learning, financial literacy, investment strategies">
+  <meta name="description" content="Moolzen is the premier high-fidelity simulated trading platform for modern investors. Mock trade real-world stocks, F&O, and 24/5 global commodities (Gold, Silver, Oil) with ₹10,00,000 + $10,000 in virtual capital, risk-free.">
+  <meta name="keywords" content="Moolzen, virtual trading, paper trading, commodities trading, gold trading simulator, silver xag usd, stocks simulator, financial literacy, investment strategies">
   <meta name="author" content="Moolzen Team">
   <link rel="canonical" href="https://moolzen.com">
   <title>Moolzen | High-Fidelity Simulated Stock Trading & Financial Learning</title>
@@ -111,6 +111,19 @@
               </div>
               
               <div class="mockup-content">
+                <!-- Market Switcher Segment Tabs (Stocks | F&O | Commodities NEW) -->
+                <div class="mockup-segment-tabs">
+                  <div class="segment-tab">Stocks</div>
+                  <div class="segment-tab">F&O</div>
+                  <div class="segment-tab active">Commodities <span class="new-pill">NEW</span></div>
+                </div>
+
+                <!-- Sub-pills for $10,000 USD margin & Positions -->
+                <div class="mockup-sub-pills">
+                  <span class="demo-balance-pill">🟡 $10,000.00 <span style="font-size: 10px; opacity: 0.6;">▼</span></span>
+                  <span class="demo-positions-pill">💼 Positions <strong>1</strong></span>
+                </div>
+
                 <div class="mockup-stats-row">
                   <div class="mockup-stat-card">
                     <span class="stat-label">Virtual Net Worth</span>
@@ -190,15 +203,17 @@
       <div class="ticker-wrapper">
         <div class="ticker-content" id="stock-ticker">
           <!-- Populated dynamically via JS for perfect realism -->
+          <div class="ticker-item"><strong style="color: #f59e0b;">🪙 GOLD (XAU/USD)</strong><span>$4,195.26</span><span class="pct up">+0.01%</span></div>
+          <div class="ticker-item"><strong style="color: #94a3b8;">🪙 SILVER (XAG/USD)</strong><span>$61.717</span><span class="pct down">-0.11%</span></div>
           <div class="ticker-item"><strong>ZOMATO</strong><span>₹180.50</span><span class="pct up">+3.2%</span></div>
           <div class="ticker-item"><strong>TATA-MOTORS</strong><span>₹950.40</span><span class="pct up">+1.8%</span></div>
-          <div class="ticker-item"><strong>PAYTM</strong><span>₹380.00</span><span class="pct down">-4.1%</span></div>
-          <div class="ticker-item"><strong>NYKAA</strong><span>₹165.20</span><span class="pct down">-1.5%</span></div>
+          <div class="ticker-item"><strong style="color: #0284c7;">🛢️ CRUDE OIL (WTI)</strong><span>$74.80</span><span class="pct up">+1.15%</span></div>
           <div class="ticker-item"><strong>RELIANCE</strong><span>₹2,900.00</span><span class="pct up">0.0%</span></div>
+          <div class="ticker-item"><strong style="color: #64748b;">💍 PLATINUM (XPT)</strong><span>$1,718.43</span><span class="pct down">-0.06%</span></div>
           <div class="ticker-item"><strong>HDFC-BANK</strong><span>₹1,450.00</span><span class="pct up">+0.5%</span></div>
           <div class="ticker-item"><strong>INFY</strong><span>₹1,420.00</span><span class="pct up">+1.2%</span></div>
+          <div class="ticker-item"><strong>PALLADIUM (XPD)</strong><span>$1,174.43</span><span class="pct up">+0.42%</span></div>
           <div class="ticker-item"><strong>APPLE</strong><span>$180.00</span><span class="pct up">+0.8%</span></div>
-          <div class="ticker-item"><strong>TSLA</strong><span>$175.50</span><span class="pct down">-3.5%</span></div>
           <div class="ticker-item"><strong>ITC</strong><span>₹430.00</span><span class="pct up">+1.1%</span></div>
         </div>
       </div>
@@ -256,6 +271,90 @@
                 <li class="self"><span class="rank">#2</span> <span class="name">you (trader)</span> <span class="worth text-green">Gold Tier</span></li>
                 <li><span class="rank">#3</span> <span class="name">compounding_pro</span> <span class="worth text-green">Silver Tier</span></li>
               </ul>
+            </div>
+          </div>
+
+          <!-- Card: Commodities & Global Markets Trading (NEW) -->
+          <div class="bento-card col-span-2 glass-card-hover" id="feat-commodities">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px;">
+              <div class="card-icon" style="margin-bottom: 8px;">🪙</div>
+              <span class="new-pill" style="font-size: 11px; padding: 4px 10px; background: linear-gradient(135deg, #f59e0b, #ea580c); box-shadow: 0 2px 10px rgba(234, 88, 12, 0.3);">NEW • 24/5 GLOBAL MARKETS</span>
+            </div>
+            <h3 class="card-title">Simulated Commodities Trading (Gold, Silver & Energies)</h3>
+            <p class="card-desc">Trade beyond domestic equities. Practice trading global precious metals, energies, and agricultural commodities with a dedicated <strong>$10,000.00 virtual USD margin account</strong>. Explore live 24/5 spot pricing for Gold, Silver, Platinum, and Crude Oil with real-time leverage and risk-free execution.</p>
+            
+            <div class="commodity-showcase-box">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <span style="font-size: 15px; font-weight: 800; color: hsl(var(--text-primary));">Markets</span>
+                <span style="font-size: 14px; opacity: 0.6;">🔍</span>
+              </div>
+
+              <!-- Filter pills matching app -->
+              <div class="commodity-category-pills">
+                <span class="cat-pill active">Commodities <span class="new-pill">NEW</span></span>
+                <span class="cat-pill">Metals</span>
+                <span class="cat-pill">Energies</span>
+                <span class="cat-pill">Agriculture</span>
+              </div>
+
+              <!-- Asset rows matching user screenshot -->
+              <div class="commodity-list">
+                <div class="commodity-row">
+                  <div class="commodity-left">
+                    <div class="asset-avatar gold">🏛️</div>
+                    <div class="commodity-meta">
+                      <strong>GOLD</strong>
+                      <span>Gold vs USD (XAU/USD)</span>
+                    </div>
+                  </div>
+                  <div class="commodity-right">
+                    <div class="commodity-price">4,195.26</div>
+                    <div class="commodity-change up">+0.01%</div>
+                  </div>
+                </div>
+
+                <div class="commodity-row">
+                  <div class="commodity-left">
+                    <div class="asset-avatar silver">⚪</div>
+                    <div class="commodity-meta">
+                      <strong>SILVER</strong>
+                      <span>Silver vs USD (XAG/USD)</span>
+                    </div>
+                  </div>
+                  <div class="commodity-right">
+                    <div class="commodity-price">61.717</div>
+                    <div class="commodity-change down">-0.11%</div>
+                  </div>
+                </div>
+
+                <div class="commodity-row">
+                  <div class="commodity-left">
+                    <div class="asset-avatar platinum">💍</div>
+                    <div class="commodity-meta">
+                      <strong>XPTUSD</strong>
+                      <span>Platinum Spot</span>
+                    </div>
+                  </div>
+                  <div class="commodity-right">
+                    <div class="commodity-price">1,718.43</div>
+                    <div class="commodity-change down">-0.06%</div>
+                  </div>
+                </div>
+
+                <div class="commodity-row">
+                  <div class="commodity-left">
+                    <div class="asset-avatar palladium">Pd</div>
+                    <div class="commodity-meta">
+                      <strong>XPDUSD</strong>
+                      <span>Palladium Spot</span>
+                    </div>
+                  </div>
+                  <div class="commodity-right">
+                    <div class="commodity-price">1,174.43</div>
+                    <div class="commodity-change up">+0.42%</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -397,6 +496,16 @@
             </button>
             <div class="faq-answer" id="faq-answer-4" hidden>
               <p>Yes! Moolzen is engineered as a mobile-first web app, matching a native Progressive Web App (PWA) look and feel, allowing you to track holdings on the go.</p>
+            </div>
+          </div>
+
+          <div class="faq-item" id="faq-5">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+              <span>Can I trade commodities like Gold, Silver, and Crude Oil?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer" id="faq-answer-5" hidden>
+              <p>Yes! Moolzen now features a dedicated Commodities trading engine with a $10,000 virtual USD margin account. You can practice 24/5 global trading on spot Gold (XAU/USD), Silver (XAG/USD), Platinum, Palladium, and Crude Oil with real-time leverage and risk management tools.</p>
             </div>
           </div>
         </div>
