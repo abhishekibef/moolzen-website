@@ -14,19 +14,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 1b. Theme Toggle System (Default Dark Mode)
   const themeToggle = document.getElementById('theme-toggle');
-  const savedTheme = localStorage.getItem('theme');
   
+  // Clear any legacy cached 'theme' key to ensure all users start in Dark Mode
+  localStorage.removeItem('theme');
+
+  const savedTheme = localStorage.getItem('moolzen_theme');
   if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
     document.body.classList.remove('dark-theme');
   } else {
     document.body.classList.add('dark-theme');
+    document.body.classList.remove('light-theme');
   }
 
   if (themeToggle) {
     themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-theme');
-      const isDark = document.body.classList.contains('dark-theme');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      const isLight = document.body.classList.contains('light-theme');
+      if (isLight) {
+        document.body.classList.remove('light-theme');
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('moolzen_theme', 'dark');
+      } else {
+        document.body.classList.add('light-theme');
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('moolzen_theme', 'light');
+      }
     });
   }
 
@@ -396,7 +408,7 @@ function initDynamicBackground() {
     // Clear canvas
     ctx.clearRect(0, 0, width, height);
 
-    const isDark = document.body.classList.contains('dark-theme');
+    const isDark = !document.body.classList.contains('light-theme');
 
     // 1. Draw floating candlesticks
     drawCandlesticks(time, isDark);
@@ -597,7 +609,7 @@ function initDynamicBackground() {
 
   function drawStatic() {
     ctx.clearRect(0, 0, width, height);
-    const isDark = document.body.classList.contains('dark-theme');
+    const isDark = !document.body.classList.contains('light-theme');
     drawPrimaryCurve(1.5, isDark);
   }
 

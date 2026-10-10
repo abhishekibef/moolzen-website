@@ -1,40 +1,56 @@
 /* --- MOOLZEN MARKETING SYSTEM STYLES --- */
 
 /* Font & Variable Definitions */
+/* Font & Variable Definitions - DEFAULT DARK THEME */
 :root {
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-display: 'Plus Jakarta Sans', 'Outfit', sans-serif;
 
-  /* Sleek Light Mode Palette (Zerodha Kite Style) */
-  --bg-primary: 0 0% 100%;        /* #FFFFFF - Pure White */
-  --bg-secondary: 0 0% 98%;       /* #FAFAFA - Crisp Off-White */
-  --bg-tertiary: 0 0% 95%;        /* #F1F1F1 - Light Neutral */
-  --card-bg: 0 0% 100% / 0.95;
-  --card-border: 0 0% 90%;        /* #E5E5E5 - Soft Gray Border */
-  
-  /* Vibrant Accents matching Kite/Zerodha Style */
-  --accent-primary: 215 90% 50%;   /* #1E40AF - Kite Blue */
-  --accent-cyan: 200 95% 45%;      /* #0284C7 - Bright Blue */
-  --accent-pink: 12 90% 52%;       /* #EA580C - Kite Orange-Red */
-  --accent-green: 142 70% 40%;     /* #16A34A - Growth Green */
-  --accent-yellow: 35 90% 50%;     /* #F59E0B - Gold Accent */
-
-  /* Text Colors */
-  --text-primary: 215 25% 15%;     /* #1F2937 - Deep Charcoal Text */
-  --text-muted: 215 16% 47%;       /* #4B5563 - Cool Grey Muted Text */
-}
-
-/* Sleek Dark Mode Overrides (Fintech Obsidian & Moolzen Emerald) */
-.dark-theme {
+  /* Default Dark Mode (Moolzen Obsidian & Emerald) */
   --bg-primary: 222 47% 7%;        /* #080C14 - Deep Obsidian Slate */
   --bg-secondary: 222 47% 4%;       /* #030712 - Rich Void Slate */
   --bg-tertiary: 222 47% 3%;        /* #02050D - Ultra Dark */
   --card-bg: 222 47% 9% / 0.85;     /* Semi-transparent Glass */
   --card-border: 222 47% 15%;      /* Subtle Slate Border */
+  
+  /* Vibrant Accents */
+  --accent-primary: 158 85% 42%;   /* Emerald Green */
+  --accent-cyan: 156 72% 58%;      /* Mint */
+  --accent-pink: 12 90% 52%;
+  --accent-green: 142 70% 40%;
+  --accent-yellow: 35 90% 50%;
 
   /* Text Colors */
   --text-primary: 210 40% 98%;    /* Crisp White Text */
   --text-muted: 215 20% 68%;      /* Muted Slate Text */
+}
+
+/* Optional Light Mode Override (Opt-in only via .light-theme) */
+.light-theme {
+  --bg-primary: 0 0% 100%;        /* #FFFFFF */
+  --bg-secondary: 0 0% 98%;       /* #FAFAFA */
+  --bg-tertiary: 0 0% 95%;        /* #F1F1F1 */
+  --card-bg: 0 0% 100% / 0.95;
+  --card-border: 0 0% 90%;
+  
+  --accent-primary: 215 90% 50%;
+  --accent-cyan: 200 95% 45%;
+  --accent-pink: 12 90% 52%;
+  --accent-green: 142 70% 40%;
+  --accent-yellow: 35 90% 50%;
+
+  --text-primary: 215 25% 15%;
+  --text-muted: 215 16% 47%;
+}
+
+.dark-theme {
+  --bg-primary: 222 47% 7%;
+  --bg-secondary: 222 47% 4%;
+  --bg-tertiary: 222 47% 3%;
+  --card-bg: 222 47% 9% / 0.85;
+  --card-border: 222 47% 15%;
+  --text-primary: 210 40% 98%;
+  --text-muted: 215 20% 68%;
 }
 
 /* Base resets & layouts */
@@ -341,18 +357,19 @@ p {
   top: 0;
   left: 0;
   width: 100%;
-  background: hsl(var(--bg-primary) / 0.7);
+  background: rgba(8, 12, 20, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid hsl(var(--card-border));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 1000;
   transition: all 0.3s ease;
 }
 
 .navbar-header.scrolled {
   padding: 6px 0;
-  background: hsl(var(--bg-primary) / 0.85);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(8, 12, 20, 0.96);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border-bottom-color: rgba(16, 185, 129, 0.2);
 }
 
 .navbar-container {
@@ -378,16 +395,16 @@ p {
   font-family: var(--font-display);
   font-size: 1.6rem;
   font-weight: 900;
-  color: #080c16;
-  -webkit-text-fill-color: #080c16;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   background: none;
   letter-spacing: -0.03em;
-  text-shadow: -1px 0 rgba(6, 182, 212, 0.45), 1px 1px rgba(239, 68, 68, 0.45);
+  text-shadow: 0 0 20px rgba(16, 185, 129, 0.35);
   transition: all 0.2s ease;
 }
 
 .logo-link:hover .logo-text {
-  text-shadow: -1.5px 0 rgba(6, 182, 212, 0.8), 1.5px 1px rgba(239, 68, 68, 0.8);
+  text-shadow: 0 0 25px rgba(52, 211, 153, 0.6);
 }
 
 .nav-links {
@@ -400,12 +417,32 @@ p {
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 600;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .nav-link:hover {
-  color: #ffffff !important;
-  opacity: 0.75;
+  color: #34d399 !important;
+  opacity: 1;
+}
+
+/* Light Theme Overrides (when explicitly toggled) */
+.light-theme .navbar-header {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.light-theme .logo-text {
+  color: #080c16 !important;
+  -webkit-text-fill-color: #080c16 !important;
+  text-shadow: none !important;
+}
+
+.light-theme .nav-link {
+  color: #0f172a !important;
+}
+
+.light-theme .nav-link:hover {
+  color: #059669 !important;
 }
 
 .hamburger-btn {
@@ -1616,20 +1653,22 @@ p {
   transform: scale(0.95);
 }
 
+/* By default (Dark Mode) show sun icon */
 .theme-toggle-btn .sun-icon {
-  display: none;
+  display: inline;
 }
 
 .theme-toggle-btn .moon-icon {
-  display: inline;
-}
-
-.dark-theme .theme-toggle-btn .sun-icon {
-  display: inline;
-}
-
-.dark-theme .theme-toggle-btn .moon-icon {
   display: none;
+}
+
+/* In Light Theme show moon icon */
+.light-theme .theme-toggle-btn .sun-icon {
+  display: none;
+}
+
+.light-theme .theme-toggle-btn .moon-icon {
+  display: inline;
 }
 
 .dark-theme .logo-text {
