@@ -163,6 +163,7 @@ p {
   filter: brightness(1.08);
 }
 
+.btn-card-white,
 .btn-secondary-outline {
   color: #080c16 !important;
   text-decoration: none;
@@ -175,10 +176,18 @@ p {
   border-radius: 12px;
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   transition: all 0.2s ease;
   box-shadow: 0 4px 16px rgba(255, 255, 255, 0.18);
 }
 
+.btn-card-white svg,
+.btn-secondary-outline svg {
+  color: #080c16 !important;
+  fill: currentColor;
+}
+
+.btn-card-white:hover,
 .btn-secondary-outline:hover {
   background: #f1f5f9 !important;
   border-color: #e2e8f0 !important;
