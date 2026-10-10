@@ -92,21 +92,48 @@ body {
 }
 
 /* ========================================================
-   ROBINHOOD-INSPIRED DYNAMIC BACKGROUND SYSTEM
+   PAGE-SPECIFIC BACKGROUND ARCHITECTURE
+   - Variant A: Dynamic (Homepage Hero & Main Showcase)
+   - Variant B: Subtle / Alternating (Features & Portfolio Bento Grid)
+   - Variant C: Static (FAQs, Learning, Support, Legal & Policy Pages)
    ======================================================== */
-.moolzen-dynamic-bg {
-  position: fixed;
+
+/* --- VARIANT A: DYNAMIC HERO BACKDROP --- */
+.moolzen-dynamic-bg,
+.moolzen-bg-dynamic {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 1250px;
+  max-height: 140vh;
   pointer-events: none !important;
   z-index: 0;
   overflow: hidden;
   background-color: transparent;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 68%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 68%, rgba(0,0,0,0) 100%);
 }
 
-/* 1. Fluid Ambient Gradient Orbs */
+/* --- VARIANT C: STATIC HIGH-READABILITY BACKGROUND --- */
+body.bg-variant-static,
+.bg-variant-static {
+  background-color: hsl(var(--bg-primary)) !important;
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.05), transparent 70%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px) !important;
+  background-size: 100% 100%, 80px 80px, 80px 80px !important;
+  background-attachment: fixed !important;
+}
+
+body.bg-variant-static .glow-accent-1,
+body.bg-variant-static .glow-accent-2,
+body.bg-variant-static .moolzen-dynamic-bg {
+  display: none !important;
+}
+
+/* 1. Fluid Ambient Gradient Orbs (Scoped to Hero) */
 .bg-orb {
   position: absolute;
   border-radius: 50%;
@@ -936,6 +963,42 @@ p {
   border-color: hsl(var(--accent-primary) / 0.35);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 15px hsl(var(--accent-primary) / 0.1);
   transform: translateY(-2px);
+}
+
+/* --- VARIANT B: ALTERNATING FEATURES BENTO TREATMENTS --- */
+#feat-capital {
+  border-top: 2px solid rgba(16, 185, 129, 0.6);
+  background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.06), transparent 70%), hsl(var(--card-bg));
+}
+
+#feat-learn {
+  border-top: 2px solid rgba(52, 211, 153, 0.6);
+  background: radial-gradient(circle at top left, rgba(52, 211, 153, 0.05), transparent 70%), hsl(var(--card-bg));
+}
+
+#feat-rivals {
+  border-top: 2px solid rgba(245, 158, 11, 0.6);
+  background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.05), transparent 70%), hsl(var(--card-bg));
+}
+
+#feat-commodities {
+  border-top: 2px solid rgba(234, 88, 12, 0.6);
+  background: radial-gradient(circle at top left, rgba(234, 88, 12, 0.06), transparent 70%), hsl(var(--card-bg));
+}
+
+#feat-feedback {
+  border-top: 2px solid rgba(249, 115, 22, 0.6);
+  background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.05), transparent 70%), hsl(var(--card-bg));
+}
+
+#feat-marketsync {
+  border-top: 2px solid rgba(14, 165, 233, 0.6);
+  background: radial-gradient(circle at top left, rgba(14, 165, 233, 0.05), transparent 70%), hsl(var(--card-bg));
+}
+
+#feat-referral {
+  border-top: 2px solid rgba(16, 185, 129, 0.6);
+  background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.06), transparent 70%), hsl(var(--card-bg));
 }
 
 .card-icon {

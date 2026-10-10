@@ -248,6 +248,8 @@ document.addEventListener('DOMContentLoaded', () => {
    - Full prefers-reduced-motion and mobile responsive handling
    ======================================================== */
 function initDynamicBackground() {
+  if (document.body.classList.contains('bg-variant-static')) return;
+
   const canvas = document.getElementById('moolzen-market-canvas');
   if (!canvas) return;
 
@@ -315,7 +317,8 @@ function initDynamicBackground() {
   function resize() {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     width = window.innerWidth;
-    height = window.innerHeight;
+    const heroWrap = canvas.parentElement;
+    height = heroWrap && heroWrap.clientHeight ? heroWrap.clientHeight : Math.min(window.innerHeight * 1.25, 1250);
     isMobile = width < 768;
 
     canvas.width = Math.floor(width * dpr);
@@ -404,6 +407,14 @@ function initDynamicBackground() {
 
     // Smooth scroll interpolation
     currentScrollY += (targetScrollY - currentScrollY) * 0.08;
+
+    // Yield drawing when user has scrolled past the dynamic hero zone
+    if (window.scrollY > height + 200) {
+      if (!isPaused && !prefersReducedMotion) {
+        animationFrameId = requestAnimationFrame(draw);
+      }
+      return;
+    }
 
     // Clear canvas
     ctx.clearRect(0, 0, width, height);
